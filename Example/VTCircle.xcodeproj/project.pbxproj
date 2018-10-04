@@ -14,8 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		A944D6C42166190A00A21917 /* VTCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A944D6C32166190A00A21917 /* VTCircle.swift */; };
 		DAA6EFFF2166612300EB9657 /* spin.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAA6EFFE2166612300EB9657 /* spin.gif */; };
+		DAA6F0032166658100EB9657 /* VTCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6F0022166658000EB9657 /* VTCircle.swift */; };
 		EDEAC6119943DF8C2B20707C /* Pods_VTCircle_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BA48E1BF96A506539D47C6 /* Pods_VTCircle_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +47,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		793DF3D65D4CD0088C6AFA85 /* Pods_VTCircle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VTCircle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CE1522D9BDF3A7E88B5285 /* Pods-VTCircle_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTCircle_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VTCircle_Example/Pods-VTCircle_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A944D6C32166190A00A21917 /* VTCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VTCircle.swift; path = ../../VTCircle.swift; sourceTree = "<group>"; };
 		B078B556734DE56BF3C9BDC5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DAA6EFFE2166612300EB9657 /* spin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spin.gif; sourceTree = "<group>"; };
+		DAA6F0022166658000EB9657 /* VTCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VTCircle.swift; path = ../../VTCircle/Classes/VTCircle.swift; sourceTree = "<group>"; };
 		ED10ED56CECAE72E1F6D152A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,7 +159,7 @@
 		A944D6C2216618EE00A21917 /* VTCircle */ = {
 			isa = PBXGroup;
 			children = (
-				A944D6C32166190A00A21917 /* VTCircle.swift */,
+				DAA6F0022166658000EB9657 /* VTCircle.swift */,
 			);
 			name = VTCircle;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				A944D6C42166190A00A21917 /* VTCircle.swift in Sources */,
+				DAA6F0032166658100EB9657 /* VTCircle.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

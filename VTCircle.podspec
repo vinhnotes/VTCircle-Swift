@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 The lucky spin with demand rewards.
                        DESC
 
-  s.homepage         = 'https://github.com/whatsltd4us/VTCircle'
+  s.homepage         = 'https://github.com/whatsltd4us/VTCircle-Swift'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'whatsltd4us' => 'vudinhvinh@luvina.net' }
-  s.source           = { :git => 'https://github.com/whatsltd4us/VTCircle.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/whatsltd4us/VTCircle-Swift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'

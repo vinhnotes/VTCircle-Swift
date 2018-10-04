@@ -12,10 +12,9 @@
 		2B49F01D95EA98E7C4DC8FD196D4A5C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		5B6E7B7BDF2A905250C630240B9A0B1E /* VTCircle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E889FBCD899975D33326507BA8E01A3 /* VTCircle-dummy.m */; };
 		A8941A046406ED852BCA079AEC0EA306 /* VTCircle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECED6A8D67CAED90C21C0BE6BAB3A135 /* VTCircle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A944D6C12166106E00A21917 /* VTCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A944D6C02166106E00A21917 /* VTCircle.swift */; };
-		A944D6C521661C0500A21917 /* VTCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A944D6C02166106E00A21917 /* VTCircle.swift */; };
 		D3E831C17442B91931B66901F819AFCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		D4327A121F2A551CF79FCE801495C066 /* Pods-VTCircle_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE2998328F84E927CAD86A5039B99A08 /* Pods-VTCircle_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAA6F0012166656E00EB9657 /* VTCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6F0002166656D00EB9657 /* VTCircle.swift */; };
 		DCFBAA3044BAD3ECF9C757D6CFD012A6 /* Pods-VTCircle_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CC67C3402CF90491EB80FE2B0B3F26 /* Pods-VTCircle_Example-dummy.m */; };
 		F6D699FF873ECEA67B85AEF137A33668 /* Pods-VTCircle_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 701BB950161CAA1A3C16C42A06755766 /* Pods-VTCircle_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -64,10 +63,10 @@
 		86A3D067249043249E88F638DD042DA2 /* Pods-VTCircle_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VTCircle_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A104A786FA46B98762D8277B6D526C68 /* Pods-VTCircle_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VTCircle_Tests.modulemap"; sourceTree = "<group>"; };
-		A944D6C02166106E00A21917 /* VTCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTCircle.swift; sourceTree = "<group>"; };
 		BE2998328F84E927CAD86A5039B99A08 /* Pods-VTCircle_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VTCircle_Tests-umbrella.h"; sourceTree = "<group>"; };
 		BE6ECF19A119AE6E1CC589780E1FFDB3 /* Pods-VTCircle_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VTCircle_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C92E793497E5D7B31111D7FE4A13C261 /* Pods-VTCircle_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VTCircle_Example-umbrella.h"; sourceTree = "<group>"; };
+		DAA6F0002166656D00EB9657 /* VTCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VTCircle.swift; path = VTCircle/Classes/VTCircle.swift; sourceTree = "<group>"; };
 		DB8EC88AE0B0193EA9B91BF6E13891CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4CFF48833D65358947D4F44FDA100C7 /* Pods-VTCircle_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VTCircle_Example-resources.sh"; sourceTree = "<group>"; };
 		ECED6A8D67CAED90C21C0BE6BAB3A135 /* VTCircle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTCircle-umbrella.h"; sourceTree = "<group>"; };
@@ -171,7 +170,7 @@
 		8013A72739A74CCFEF6E35B8CCA4E411 /* VTCircle */ = {
 			isa = PBXGroup;
 			children = (
-				A944D6C02166106E00A21917 /* VTCircle.swift */,
+				DAA6F0002166656D00EB9657 /* VTCircle.swift */,
 				D28536B769214AAF8D5868E337BC9C19 /* Pod */,
 				B969AAE9DD828F5F511580B7A9C5E750 /* Support Files */,
 			);
@@ -350,7 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFBAA3044BAD3ECF9C757D6CFD012A6 /* Pods-VTCircle_Example-dummy.m in Sources */,
-				A944D6C12166106E00A21917 /* VTCircle.swift in Sources */,
+				DAA6F0012166656E00EB9657 /* VTCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B6E7B7BDF2A905250C630240B9A0B1E /* VTCircle-dummy.m in Sources */,
-				A944D6C521661C0500A21917 /* VTCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
