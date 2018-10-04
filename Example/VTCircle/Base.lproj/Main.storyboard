@@ -31,7 +31,7 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="circleImage" value="0"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="pointerImage" value="1"/>
                                     <userDefinedRuntimeAttribute type="size" keyPath="pointerSize">
-                                        <size key="value" width="100" height="110"/>
+                                        <size key="value" width="50" height="60"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="restTime">
                                         <integer key="value" value="30"/>
