@@ -22,7 +22,7 @@ pod 'VTCircle'
 
 ## Author
 
-whatsltd4us, vudinhvinh@luvina.net
+whatsltd4us, vdvinh.nd@gmail.com
 
 ## License
 

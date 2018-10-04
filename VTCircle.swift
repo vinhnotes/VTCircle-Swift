@@ -26,6 +26,26 @@ class VTCircle: UIView {
     private var card: Int = 0
     private var remainingTimer: Timer?
     
+    var timeCount: Int = 0
+    @IBInspectable var restTime: Int = 0 {
+        didSet {
+            timeCount = restTime
+        }
+    }
+    
+    private var buttonSize: CGSize = .zero
+    @IBInspectable var pointerSize: CGSize = .zero {
+        didSet {
+            buttonSize = pointerSize
+        }
+    }
+    
+    @IBInspectable var sectors: Int = 8 {
+        didSet {
+            numberOfSectors = sectors
+        }
+    }
+    
     @IBInspectable var circleImage: UIImage = UIImage() {
         didSet {
             wheelImage.image = circleImage
@@ -44,15 +64,14 @@ class VTCircle: UIView {
     
     let pointerButton: UIButton = {
         let button = UIButton(frame: .zero)
-        button.layer.cornerRadius = 50
-        button.setTitle("START", for: .normal)
-        button.backgroundColor = .red
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(touchStart), for: .touchUpInside)
         return button
     }()
     
     let wheelImage: UIImageView = {
         let image = UIImageView(frame: .zero)
+        image.translatesAutoresizingMaskIntoConstraints = false
         image.backgroundColor = .clear
         return image
     }()
@@ -64,33 +83,32 @@ class VTCircle: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupView()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        numberOfSectors = 8
-        stopIndex = -1
-        currentIndex = -1
-        animationDecelerationFactor = 1
-        wheelImage.transform = CGAffineTransform(rotationAngle: 0)
-        
-        pointerButton.layer.cornerRadius = pointerButton.frame.size.width / 2
+        setupView()
     }
     
     func setupView() {
         addSubview(wheelImage)
         addSubview(pointerButton)
-        wheelImage.frame = frame
-        pointerButton.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        wheelImage.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        wheelImage.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        wheelImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        wheelImage.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
-        addConstraint(NSLayoutConstraint(item: pointerButton, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: pointerButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: wheelImage, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: wheelImage, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: wheelImage, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: wheelImage, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 0))
+        pointerButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        pointerButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        pointerButton.widthAnchor.constraint(equalToConstant: buttonSize.width).isActive = true
+        pointerButton.heightAnchor.constraint(equalToConstant: buttonSize.height).isActive = true
+        
+        timeCount = restTime
+        stopIndex = -1
+        currentIndex = -1
+        animationDecelerationFactor = 1
+        wheelImage.transform = CGAffineTransform(rotationAngle: 0)
+        pointerButton.layer.cornerRadius = pointerButton.frame.size.width / 2
     }
     
     //MARK: wheel
@@ -130,6 +148,10 @@ class VTCircle: UIView {
         currentRotation += currentSpeed
         currentIndex = rotation2index(currentRotation)
         rotateToCurrentRotation(animated: true)
+        timeCount-=1
+        if (timeCount > 0) {
+            return
+        }
         if currentSpeed >= Float(0.01) {
             currentSpeed *= animationDecelerationFactor
             if currentIndex == stopIndex {
@@ -139,7 +161,7 @@ class VTCircle: UIView {
             if currentIndex != stopIndex {
                 return
             } else {
-                currentRotation += currentSpeed
+                currentRotation += currentSpeed + 0.01
                 rotateToCurrentRotation(animated: true)
                 stopInertiaTimer()
             }
@@ -169,6 +191,7 @@ class VTCircle: UIView {
             inertiaTimer = nil
             stopIndex = -1
             animationDecelerationFactor = 1
+            timeCount = restTime
         }
     }
 
@@ -177,7 +200,7 @@ class VTCircle: UIView {
     }
     
     @objc func setStop() {
-        let randomNumber = Int(arc4random()) % 8
+        let randomNumber = Int(arc4random()) % numberOfSectors
         stopIndex = randomNumber
         print(String(format: "%i", stopIndex))
     }

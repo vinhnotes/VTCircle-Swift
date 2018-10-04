@@ -21,23 +21,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUB-N6-gHA" customClass="VTCircle" customModule="VTCircle_Example" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIC-hC-rL4" customClass="VTCircle" customModule="VTCircle_Example" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="3EE-S0-bl6"/>
-                                    <constraint firstAttribute="height" constant="250" id="GJ5-9W-VLG"/>
+                                    <constraint firstAttribute="width" secondItem="hIC-hC-rL4" secondAttribute="height" multiplier="1:1" id="bg8-Uv-V76"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="wheelImage" value="0"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="circleImage" value="0"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="pointerImage" value="1"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="pointerSize">
+                                        <size key="value" width="100" height="110"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="restTime">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EUB-N6-gHA" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="IgQ-NY-LiH"/>
-                            <constraint firstItem="EUB-N6-gHA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="oEU-8e-cnZ"/>
+                            <constraint firstItem="hIC-hC-rL4" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="0Of-vP-w0y"/>
+                            <constraint firstItem="hIC-hC-rL4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="VSq-Zn-rbG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hIC-hC-rL4" secondAttribute="trailing" id="aK7-L6-tWO"/>
+                            <constraint firstItem="hIC-hC-rL4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="yKe-Eh-Y8I"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,5 +55,6 @@
     </scenes>
     <resources>
         <image name="0" width="735" height="735"/>
+        <image name="1" width="202" height="235"/>
     </resources>
 </document>
