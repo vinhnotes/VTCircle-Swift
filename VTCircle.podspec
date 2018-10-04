@@ -32,11 +32,5 @@ The lucky spin with demand rewards.
 
   s.source_files = 'VTCircle/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'VTCircle' => ['VTCircle/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.swift_version = '4.1'
 end
