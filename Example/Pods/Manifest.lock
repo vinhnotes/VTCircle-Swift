@@ -1,0 +1,16 @@
+PODS:
+  - VTCircle (0.1.0)
+
+DEPENDENCIES:
+  - VTCircle (from `../`)
+
+EXTERNAL SOURCES:
+  VTCircle:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VTCircle: 368ce771e7db440ae2ca570b2458dd409659b853
+
+PODFILE CHECKSUM: 0445757f32c76c8c4c4f16efb9df4d45f4c59f80
+
+COCOAPODS: 1.5.3

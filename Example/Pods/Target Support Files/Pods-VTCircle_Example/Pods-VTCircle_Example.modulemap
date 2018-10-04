@@ -1,0 +1,6 @@
+framework module Pods_VTCircle_Example {
+  umbrella header "Pods-VTCircle_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
