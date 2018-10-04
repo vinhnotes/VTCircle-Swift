@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/VTCircle.svg?style=flat)](https://cocoapods.org/pods/VTCircle)
 [![Platform](https://img.shields.io/cocoapods/p/VTCircle.svg?style=flat)](https://cocoapods.org/pods/VTCircle)
 
-## Example
+## Screenshot
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![spin](https://raw.githubusercontent.com/whatsltd4us/VTCircle-Swift/master/Example/VTCircle/spin.gif)
 
 ## Requirements
 
